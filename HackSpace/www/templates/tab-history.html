@@ -1,0 +1,96 @@
+<ion-header-bar class="bar-dark">
+      <h1 class="title">Tasks</h1>
+   <button class="button button-icon ion-ios-refresh-empty" ng-click="refresh()">
+        </button>
+    </ion-header-bar>
+
+        <ion-view>
+        <ion-content>
+        <div class="rj-contacts-index-bar">Frozen</div>
+      <ion-list>
+        <ion-item ng-repeat="history in historys| filter:{state:'frozen'}" ng-click="frozenTask(history.taskid,history.beginDate,history.datatype,history.user,history.operation,history.number,history.action,history.output,history.targetdevice,history.targetdeviceid,history.address)">
+          Task ID: {{history.taskid}}
+          </br>
+          Start Time: {{history.beginDate}}
+          </br>
+          Type: {{history.datatype}}
+          </br>
+          User Name: {{history.user}}
+          </br>
+          Operation: {{history.operation}}
+          </br>
+          Number: {{history.number}}
+          </br>
+          Action: {{history.action}}
+          </br>
+          Output: {{history.output}}
+          </br>
+          Targetdevice: {{history.targetdevice}}
+<!--           </br>
+          Location:{{history.location}} -->
+          </br>
+          Address:{{history.address}}
+          </br>
+          Targetdeviceid:{{history.targetdeviceid}}
+        </ion-item>
+      </ion-list>
+        <div class="rj-contacts-index-bar">Processing</div>
+      <ion-list>
+        <ion-item ng-repeat="history in historys| filter:{state:'processing'}" ng-click="processingTask(history.taskid,history.beginDate,history.datatype,history.user,history.operation,history.number,history.action,history.output,history.targetdevice,history.location,history.targetdeviceid,history.address)">
+          Task ID: {{history.taskid}}
+          </br>
+          Start Time: {{history.beginDate}}
+          </br>
+          Type: {{history.datatype}}
+          </br>
+          User Name: {{history.user}}
+          </br>
+          Operation: {{history.operation}}
+          </br>
+          Number: {{history.number}}
+          </br>
+          Action: {{history.action}}
+          </br>
+          Output: {{history.output}}
+          </br>
+          Targetdevice: {{history.targetdevice}}
+          </br>
+<!--           Location:{{history.location}}
+          </br> -->
+          Address:{{history.address}}
+          </br>
+          Targetdeviceid:{{history.targetdeviceid}}
+        </ion-item>
+      </ion-list>
+      <div class="rj-contacts-index-bar">Done</div>
+      <ion-list>
+        <ion-item ng-repeat="history in historys| filter:{state:'done'}" ng-click="doneTask(history.taskid,history.beginDate,history.datatype,history.user,history.operation,history.number,history.action,history.output,history.targetdevice,history.location,history.targetdeviceid,history.address)">
+          Task ID: {{history.taskid}}
+          </br>
+          Start Time: {{history.beginDate}}
+          </br>
+          Type: {{history.datatype}}
+          </br>
+          User Name: {{history.user}}
+          </br>
+          Operation: {{history.operation}}
+          </br>
+          Number: {{history.number}}
+          </br>
+          Action: {{history.action}}
+          </br>
+          Output: {{history.output}}
+          </br>
+          Targetdevice: {{history.targetdevice}}
+          </br>
+<!--           Location: {{history.location}}
+          </br> -->
+          Address:{{history.address}}
+          </br>
+          Targetdeviceid:{{history.targetdeviceid}}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+</ion-view>
+
+

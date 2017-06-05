@@ -1,0 +1,37 @@
+<ion-header-bar class="bar-dark">
+      <h1 class="title" style="text-align:center">Settings</h1>
+</ion-header-bar>
+
+<ion-view>
+     <ion-content>
+      <ion-list>
+        <ion-item href="#/tab/account">
+        	<div style="float:left;text-align:center">Account
+        	</div>
+        </ion-item>
+        <ion-item href="#/tab/about-device">
+        	<div style="float:left;text-align:center">About the device
+        	</div>
+        </ion-item>
+        <ion-item ng-click="logout()">
+        	<div style="float:left;text-align:center">Logout
+        	</div>
+        </ion-item>
+        <!-- <ion-item class="item item-toggle">
+           <div style="float:left;color:black;text-align:center">Allow Positioning
+        	</div>
+           <label class="toggle toggle-dark">
+             <input type="checkbox" checked="">
+             <div class="track">
+               <div class="handle"></div>
+             </div>
+           </label>
+        </ion-item> -->
+        	<ion-toggle toggle-class="toggle-dark"
+        	ng-model="pushNotification.checked"
+                    ng-change="pushNotificationChange()">
+          Upload the coordinates
+        </ion-toggle>
+      </ion-list>
+    </ion-content>
+</ion-view>

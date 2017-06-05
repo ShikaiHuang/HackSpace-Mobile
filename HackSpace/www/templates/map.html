@@ -1,0 +1,37 @@
+<style>
+       #map {
+        height: 270px;
+        /*height:50%;*/
+        width: 100%;
+       }
+</style>
+
+<ion-header-bar class="bar-dark">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-left" ui-sref="tab.rules">
+        </button>
+    </div>
+    <h1 class="title">Map</h1>
+    <button class="button" ng-click="save()">Save</button>
+</ion-header-bar>
+
+<ion-content>
+<!-- <div style="text-align:center">*the circles shows radius of 300m and 500m</div> -->
+<div id="map" data-tap-disabled="true"></div>
+    <ion-list>
+        <ion-item>
+            Coordinates:
+                 <input type="text" name="lng" id="lng" style="width: 200px; height:17px" value="112.98863989999995"/>
+                 <input type="text" name="lat" id="lat" style="width: 200px; height:17px"  value="26.8252901" />
+<!--                  <input type="text" name="lat" id="lat" style="width: 200px;"  value="26.8252901" /> -->
+        </ion-item>
+        <ion-item>
+            Address：<br />
+                <textarea name="address" id="address" cols="60" rows="9">Hunan Province, China</textarea>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer-bar class="bar-dark">
+    <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Me</a>
+</ion-footer-bar>

@@ -1,0 +1,31 @@
+/* Empty. Add your own CSS if you like */
+/* strike */
+.strike {
+    text-decoration: line-through;
+}
+
+/* bold */
+.bold {
+    font-weight: bold;
+}
+
+/* red */
+.red {
+    color: red;
+}
+
+/* has-error */
+.has-error {
+    color: red;
+    background-color: yellow;
+}
+
+/* green */
+.green {
+    color: green;
+}
+
+/* orange */
+.orange {
+    color: orange;
+}

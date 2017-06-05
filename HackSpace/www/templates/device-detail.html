@@ -1,0 +1,28 @@
+<style>
+    #map {
+        height: 270px;
+        /*height:100%;*/
+        width: 100%;
+    }
+</style>
+
+<ion-header-bar class="bar-dark">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-left" ui-sref="tab.devices">
+        </button>
+    </div>
+    <h1 class="title">Device Info</h1>
+</ion-header-bar>
+
+<ion-view title="Account">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="detail in deviceDetail">
+                {{detail.key}}: {{detail.value}}
+            </ion-item>
+        </ion-list>
+        <br>
+        <br>
+        <div id="map" data-tap-disabled="true"></div>
+    </ion-content>
+</ion-view>

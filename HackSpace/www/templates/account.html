@@ -1,0 +1,17 @@
+<ion-header-bar class="bar-dark">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-left" ui-sref="tab.setting">
+        </button>
+    </div>
+    <h1 class="title">Account</h1>
+</ion-header-bar>
+
+<ion-view title="Account">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="info in account">
+                {{info.key}}: {{info.value}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,107 @@
+<ion-header-bar class="bar-dark">
+      <h1 class="title">Device Rules</h1>
+      <button class="button" ng-click="hackit()">
+        Hack It!</button>
+</ion-header-bar>
+
+<ion-content>
+<div class="input-label" style="margin-left:18px;"><h1>IF</h1></div>
+<div class="list">
+  <div class="item item-input item-select">
+    <div class="input-label">
+      DataType
+    </div>
+    <select ng-model="selectedData.selectedDataType" ng-options="datatype.dt disable when datatype.disabled for datatype in datatypes">
+    </select>
+  </div>
+
+  <div class="item item-input item-select">
+    <div class="input-label">
+      Operation
+    </div>
+    <select ng-model="selectedData.selectedOperation" ng-options="operation.op disable when operation.disabled for operation in operations">
+    </select>
+  </div>
+
+  <div class="item item-input item-select">
+    <div class="input-label">
+      Number
+    </div>
+    <select ng-model="selectedData.selectedNum" ng-options="number.n disable when number.disabled for number in numbers">
+    </select>
+  </div>
+
+  <div class="item item-input item-select">
+    <div class="input-label">
+      Logic Gate
+    </div>
+    <select ng-model="selectedData.selectedLogi" ng-options="logicgate.logi disable when logicgate.disabled for logicgate in logicgates">
+    </select>
+  </div>
+</div>
+
+<!-- Then rule -->
+<div class="input-label" style="margin-left:18px;"><h1>THEN</h1></div>
+<div class="list">
+  <div class="item item-input item-select">
+    <div class="input-label">
+      Output
+    </div>
+    <select ng-model="selectedData.selectedOutput" ng-options="output.out disable when output.disabled for output in outputs">
+    </select>
+  </div>
+</div>
+
+<!-- Do rules -->
+<div class="input-label" style="margin-left:18px;"><h1>DO</h1></div>
+<div class="list">
+  <div class="item item-input item-select">
+    <div class="input-label">
+      Action
+    </div>
+    <select ng-model="selectedData.selectedAction" ng-options="action.act disable when action.disabled for action in actions">
+    </select>
+  </div>
+</div>
+
+<!-- At rules -->
+<div class="input-label" style="margin-left:18px;"><h1>AT</h1></div>
+<div class="list">
+  <div class="item item-input item-select">
+    <div class="input-label">
+      Date
+    </div>
+    <select ng-model="selectedData.selectedDate" ng-options="date.d disable when date.disabled for date in dates">
+    </select>
+  </div>
+  <div class="item item-input item-select">
+    <div class="input-label">
+      Time
+    </div>
+    <select ng-model="selectedData.selectedTime" ng-options="time.t disable when time.disabled for time in times">
+    </select>
+  </div>
+  <div class="item item-input" ng-if="selectedData.selectedDataType.flag_ab">
+    <div class="input-label" ng-click="select()">
+      Absolute Location : click me to select a location<br>
+      {{selectedData.selectedAbsoluteLocation}}
+    </div>
+  </div>
+  <div class="item item-input item-select" ng-if="selectedData.selectedDataType.flag_mo">
+    <div class="input-label">
+      Target Device <br>
+      <!-- {{moving_location}} -->
+      <!-- {{selectedData.selectedTargetDevice.deviceid}} -->
+    </div>
+    <select ng-model="selectedData.selectedTargetDevice" ng-options="device.name disable when device.disabled for device in devices">
+    </select>
+  </div>
+</div>
+
+<!-- <div>
+  <button class="button button-block button-dark" ng-click="hackit()">Hackit</button>
+</div> -->
+
+<!--  <button class="button button-block button-calm" ng-click="" style="width: 280px; height: 60px; margin:auto;">Hack It!</button> -->
+</ion-content>
+
